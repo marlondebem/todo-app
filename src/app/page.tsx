@@ -4,6 +4,7 @@ import { useState } from 'react'
 
 import { TaskForm } from '@/components/TaskForm'
 import { TaskList } from '@/components/TaskList'
+import { DarkModeButton } from '@/components/DarkModeButton'
 
 interface Task {
   id: number
@@ -35,6 +36,7 @@ export default function Home() {
     <div className='flex flex-col items-center'>
       <TaskForm onAddTask={addTask} />
       <TaskList tasks={tasks} onTaskToggle={toggleTaskCompletion} onTaskRemove={removeTask} />
+      <DarkModeButton />
     </div>
   )
 }

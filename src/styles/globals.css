@@ -4,6 +4,6 @@
 
 @layer base {
   body {
-    @apply min-h-screen antialiased overflow-hidden
+    @apply min-h-screen antialiased overflow-hidden bg-white dark:bg-zinc-950 transition-all
   }
 }
