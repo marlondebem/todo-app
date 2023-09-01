@@ -22,7 +22,7 @@ export function TaskList({ tasks, onTaskToggle, onTaskRemove }: TaskListProps) {
           key={task.id}
         >
           <Checkbox.Root
-            className='flex items-center bg-zinc-100 dark:bg-zinc-900 justify-center w-5 h-5 border border-zinc-200 dark:border-zinc-800 aria-checked:bg-cyan-400 aria-checked:border-cyan-400 dark:aria-checked:bg-cyan-400 dark:aria-checked:border-cyan-400 rounded-md transition'
+            className='flex items-center bg-zinc-100 dark:bg-zinc-900 justify-center w-5 h-5 border border-zinc-200 dark:border-zinc-800 aria-checked:bg-cyan-400 aria-checked:border-cyan-400 dark:aria-checked:bg-cyan-500 dark:aria-checked:border-cyan-500 rounded-md transition'
             checked={task.completed}
             onCheckedChange={() => onTaskToggle(task.id)}
           >
