@@ -9,9 +9,15 @@ interface TaskFormProps {
 export function TaskForm({ onAddTask }: TaskFormProps) {
   const [description, setDescription] = useState('')
 
+  const maxCharCount = 65
+  const remainingChars = maxCharCount - description.length
+
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target
-    setDescription(value)
+
+    if (value.length <= maxCharCount) {
+      setDescription(value)
+    }
   }
 
   const handleSubmit = (event: FormEvent) => {
@@ -24,18 +30,19 @@ export function TaskForm({ onAddTask }: TaskFormProps) {
   }
 
   return (
-    <div className='bg-zinc-100 flex items-center max-w-2xl w-full h-16 rounded-3xl my-8'>
+    <div className='bg-zinc-100 flex items-center max-w-2xl w-full h-16 rounded-2xl my-8'>
       <form 
-        className='w-full'
+        className='w-full flex items-center'
         onSubmit={handleSubmit}
       >
         <input 
-          className='bg-transparent px-5 outline-none w-full font-normal text-base text-[#5c5c5c]'
+          className='bg-transparent px-5 outline-none w-full font-normal text-base text-zinc-500'
           type='text'
           placeholder='Add a description...'
           value={description}
           onChange={handleInputChange}
         />
+        <span className={`px-4 text-xs font-medium ${remainingChars === 0 ? 'text-red-300' : 'text-zinc-300'}`}>{remainingChars}</span>
         <button type='submit' hidden></button>
       </form>
     </div>

@@ -4,6 +4,6 @@
 
 @layer base {
   body {
-    @apply min-h-screen antialiased 
+    @apply min-h-screen antialiased overflow-hidden
   }
 }
