@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { TaskForm } from '@/components/TaskForm'
 import { TaskList } from '@/components/TaskList'
@@ -14,6 +14,15 @@ interface Task {
 
 export default function Home() {
   const [tasks, setTasks] = useState<Task[]>([])
+
+  useEffect(() => {
+    const cachedTasks = JSON.parse(localStorage.getItem('tasks') || '[]')
+    setTasks(cachedTasks)
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks))
+  }, [tasks])
 
   const addTask = (description: string) => {
     const newTask = {

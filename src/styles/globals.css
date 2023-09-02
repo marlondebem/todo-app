@@ -4,6 +4,6 @@
 
 @layer base {
   body {
-    @apply min-h-screen antialiased overflow-hidden bg-zinc-50 dark:bg-zinc-950
+    @apply min-h-screen antialiased bg-zinc-100 dark:bg-zinc-950
   }
 }
