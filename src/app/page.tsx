@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from 'react'
 
+import { Header } from '@/components/Header'
 import { TaskForm } from '@/components/TaskForm'
 import { TaskList } from '@/components/TaskList'
-import { DarkModeButton } from '@/components/DarkModeButton'
 
 interface Task {
   id: number
@@ -43,9 +43,9 @@ export default function Home() {
 
   return (
     <div className='flex flex-col items-center'>
+      <Header />
       <TaskForm onAddTask={addTask} />
       <TaskList tasks={tasks} onTaskToggle={toggleTaskCompletion} onTaskRemove={removeTask} />
-      <DarkModeButton />
     </div>
   )
 }

@@ -34,7 +34,7 @@ export function TaskList({ tasks, onTaskToggle, onTaskRemove }: TaskListProps) {
             {task.description}
           </span>
           <button
-            className='bg-transparent text-zinc-300 dark:text-zinc-500 hover:bg-zinc-200 dark:hover:bg-zinc-800 hover:text-red-400 dark:hover:text-red-400 p-2 rounded-full transition'
+            className='bg-transparent text-zinc-300 dark:text-zinc-500 hover:bg-zinc-200 dark:hover:bg-zinc-900 hover:text-red-400 dark:hover:text-red-400 p-2 rounded-full transition'
             onClick={() => onTaskRemove(task.id)}
           >
             <TrashIcon className='h-4' />

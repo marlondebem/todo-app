@@ -18,12 +18,23 @@ export function DarkModeButton() {
 
   const currentTheme = theme === 'system' ? systemTheme : theme
 
+  const toggleTheme = () => {
+    if (currentTheme === 'dark') {
+      setTheme('light')
+    } else {
+      setTheme('dark')
+    }
+  }
+
   return (
-    <div>
+    <div 
+      className='bg-transparent text-zinc-500 hover:bg-zinc-200 hover:text-violet-400 dark:text-zinc-200 hover:dark:bg-zinc-900 hover:dark:text-yellow-400 h-9 w-9 flex items-center justify-center rounded-full cursor-pointer transition'
+      onClick={toggleTheme}
+    >
       {currentTheme === 'dark' ? (
-        <SunIcon className='h-5 w-5 cursor-pointer' onClick={() => setTheme('light')} />
+        <SunIcon className='h-5 w-5' />
       ) : (
-        <MoonIcon className='h-5 w-5 cursor-pointer' onClick={() => setTheme('dark')} />
+        <MoonIcon className='h-5 w-5' />
       )}
     </div>
   )
