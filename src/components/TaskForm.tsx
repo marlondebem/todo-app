@@ -36,7 +36,7 @@ export function TaskForm({ onAddTask }: TaskFormProps) {
         onSubmit={handleSubmit}
       >
         <input 
-          className='bg-transparent px-5 outline-none w-full font-normal text-base text-zinc-600 dark:text-zinc-100 placeholder:text-zinc-300 dark:placeholder:text-zinc-500'
+          className='bg-transparent px-5 outline-none w-full font-normal text-base text-zinc-600 dark:text-zinc-100 placeholder:text-zinc-400 dark:placeholder:text-zinc-500'
           type='text'
           placeholder='Add a description...'
           value={description}
