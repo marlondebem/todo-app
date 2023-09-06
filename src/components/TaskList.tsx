@@ -15,7 +15,7 @@ interface TaskListProps {
 
 export function TaskList({ tasks, onTaskToggle, onTaskRemove }: TaskListProps) {
   return (
-    <div className='max-w-2xl w-full pb-8'>
+    <div className='max-w-sm px-4 md:max-w-md md:px-0 lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl w-full pb-8'>
       {tasks.length === 0 ? (
        <div className='flex items-center justify-center gap-2 text-zinc-500 dark:text-zinc-500'>
         <ExclamationCircleIcon className='h-5' />
