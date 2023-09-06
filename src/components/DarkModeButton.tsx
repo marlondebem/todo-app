@@ -28,7 +28,7 @@ export function DarkModeButton() {
 
   return (
     <div 
-      className='bg-transparent text-zinc-500 hover:bg-zinc-200 hover:text-cyan-500 dark:text-zinc-200 hover:dark:bg-zinc-900 hover:dark:text-yellow-400 h-9 w-9 flex items-center justify-center rounded-full cursor-pointer transition'
+      className='bg-transparent text-zinc-500 hover:bg-zinc-100 hover:text-cyan-500 dark:text-zinc-200 hover:dark:bg-zinc-900 hover:dark:text-yellow-400 h-9 w-9 flex items-center justify-center rounded-full cursor-pointer transition'
       onClick={toggleTheme}
     >
       {currentTheme === 'dark' ? (
